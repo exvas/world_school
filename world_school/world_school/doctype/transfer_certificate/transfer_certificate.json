@@ -1,0 +1,220 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-12-19 08:29:50.421626",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1xjv",
+  "institution",
+  "name_of_the_pupil",
+  "admission_no",
+  "date_of_birth",
+  "joining_date",
+  "month_year_of_admission",
+  "progress_in_studies",
+  "conduct_in_school",
+  "attendance",
+  "promotion",
+  "column_break_qchi",
+  "issue_date",
+  "guardian_name",
+  "nationality",
+  "gender",
+  "standard_in_which_studying_at_the_time_of_leaving",
+  "date_since_studying_in_the_above_standard",
+  "date_of_leaving",
+  "reasons_for_leaving",
+  "amended_from",
+  "more_tab",
+  "naming_series",
+  "column_break_lsof",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1xjv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "institution",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Institution",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qchi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "issue_date",
+   "fieldtype": "Date",
+   "label": "Issue Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "guardian_name",
+   "fieldtype": "Data",
+   "label": "Guardian Name"
+  },
+  {
+   "fetch_from": "name_of_the_pupil.nationality",
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": "Nationality",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "name_of_the_pupil.gender",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "name_of_the_pupil.date_of_birth",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "label": "Date of Birth",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "name_of_the_pupil.joining_date",
+   "fieldname": "joining_date",
+   "fieldtype": "Data",
+   "label": "Joining Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "month_year_of_admission",
+   "fieldtype": "Data",
+   "label": "Month & Year of Admission"
+  },
+  {
+   "fieldname": "date_since_studying_in_the_above_standard",
+   "fieldtype": "Date",
+   "label": "Date Since Studying In The Above Standard"
+  },
+  {
+   "fieldname": "progress_in_studies",
+   "fieldtype": "Data",
+   "label": "Progress in Studies"
+  },
+  {
+   "fieldname": "conduct_in_school",
+   "fieldtype": "Data",
+   "label": "Conduct in School"
+  },
+  {
+   "fieldname": "standard_in_which_studying_at_the_time_of_leaving",
+   "fieldtype": "Data",
+   "label": "Standard In Which Studying  At The Time Of Leaving"
+  },
+  {
+   "fetch_from": "name_of_the_pupil.date_of_leaving",
+   "fieldname": "date_of_leaving",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Date of Leaving",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "name_of_the_pupil.reason_for_leaving",
+   "fieldname": "reasons_for_leaving",
+   "fieldtype": "Text",
+   "label": "Reasons for Leaving",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendance",
+   "fieldtype": "Data",
+   "label": "Attendance"
+  },
+  {
+   "fieldname": "promotion",
+   "fieldtype": "Data",
+   "label": "Promotion"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Transfer Certificate",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "more_tab",
+   "fieldtype": "Tab Break",
+   "label": "More"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "WS/TC/.YY./.MM./.###",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_lsof",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Submitted",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "admission_no.student_name",
+   "fieldname": "name_of_the_pupil",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Name of the Pupil",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "admission_no",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Admission No",
+   "options": "Student",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-19 09:38:52.442966",
+ "modified_by": "Administrator",
+ "module": "World School",
+ "name": "Transfer Certificate",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
