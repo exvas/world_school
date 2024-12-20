@@ -8,8 +8,9 @@
  "field_order": [
   "section_break_1xjv",
   "institution",
-  "name_of_the_pupil",
   "admission_no",
+  "name_of_the_pupil_code",
+  "name_of_the_pupil",
   "date_of_birth",
   "joining_date",
   "month_year_of_admission",
@@ -59,7 +60,8 @@
   {
    "fieldname": "guardian_name",
    "fieldtype": "Data",
-   "label": "Guardian Name"
+   "label": "Guardian Name",
+   "reqd": 1
   },
   {
    "fetch_from": "name_of_the_pupil.nationality",
@@ -92,27 +94,32 @@
   {
    "fieldname": "month_year_of_admission",
    "fieldtype": "Data",
-   "label": "Month & Year of Admission"
+   "label": "Month & Year of Admission",
+   "reqd": 1
   },
   {
    "fieldname": "date_since_studying_in_the_above_standard",
    "fieldtype": "Date",
-   "label": "Date Since Studying In The Above Standard"
+   "label": "Date Since Studying In The Above Standard",
+   "reqd": 1
   },
   {
    "fieldname": "progress_in_studies",
    "fieldtype": "Data",
-   "label": "Progress in Studies"
+   "label": "Progress in Studies",
+   "reqd": 1
   },
   {
    "fieldname": "conduct_in_school",
    "fieldtype": "Data",
-   "label": "Conduct in School"
+   "label": "Conduct in School",
+   "reqd": 1
   },
   {
    "fieldname": "standard_in_which_studying_at_the_time_of_leaving",
    "fieldtype": "Data",
-   "label": "Standard In Which Studying  At The Time Of Leaving"
+   "label": "Standard In Which Studying  At The Time Of Leaving",
+   "reqd": 1
   },
   {
    "fetch_from": "name_of_the_pupil.date_of_leaving",
@@ -132,12 +139,14 @@
   {
    "fieldname": "attendance",
    "fieldtype": "Data",
-   "label": "Attendance"
+   "label": "Attendance",
+   "reqd": 1
   },
   {
    "fieldname": "promotion",
    "fieldtype": "Data",
-   "label": "Promotion"
+   "label": "Promotion",
+   "reqd": 1
   },
   {
    "fieldname": "amended_from",
@@ -173,27 +182,37 @@
    "read_only": 1
   },
   {
-   "fetch_from": "admission_no.student_name",
-   "fieldname": "name_of_the_pupil",
-   "fieldtype": "Data",
-   "in_standard_filter": 1,
-   "label": "Name of the Pupil",
-   "read_only": 1,
-   "reqd": 1
-  },
-  {
+   "fetch_from": "name_of_the_pupil_code.custom_admission_number",
    "fieldname": "admission_no",
    "fieldtype": "Link",
    "in_standard_filter": 1,
    "label": "Admission No",
    "options": "Student",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "admission_no.student_name",
+   "fieldname": "name_of_the_pupil_code",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Name of the Pupil (Code)",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "name_of_the_pupil_code.student_name",
+   "fieldname": "name_of_the_pupil",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Name of the Pupil ( Full Name )",
+   "read_only": 1,
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-19 09:38:52.442966",
+ "modified": "2024-12-20 06:13:24.957404",
  "modified_by": "Administrator",
  "module": "World School",
  "name": "Transfer Certificate",
