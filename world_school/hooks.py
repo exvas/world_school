@@ -251,6 +251,12 @@ fixtures = [
                 "in",
                 [
                     "Student-custom_admission_number",
+                    "Student-custom_religion",
+                    "Student-custom_gr_no",
+                    "Student-custom_contact_number",
+                    "Student-custom_alternative_number",
+                    "Student-custom_email_id",
+
                 ]
             ]
         ]
