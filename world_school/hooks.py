@@ -256,6 +256,8 @@ fixtures = [
                     "Student-custom_contact_number",
                     "Student-custom_alternative_number",
                     "Student-custom_email_id",
+                    "Fee Component-custom_net_amount",
+                    "Fee Component-custom_percentage",
 
                 ]
             ]
