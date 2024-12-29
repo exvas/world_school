@@ -1,3 +1,9 @@
+frappe.ui.form.on('Fee Structure', {
+	refresh(frm) {
+		// No direct event here; the events are handled on child table rows
+	}
+})
+
 frappe.ui.form.on('Fee Component', {
     custom_net_amount: function (frm, cdt, cdn) {
         calculate_amount(frm, cdt, cdn);
