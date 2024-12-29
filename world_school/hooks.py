@@ -263,6 +263,7 @@ fixtures = [
                     "Student-custom_email_id",
                     "Fee Component-custom_net_amount",
                     "Fee Component-custom_percentage",
+                    "Fee Component-custom_criteria",
 
                 ]
             ]
